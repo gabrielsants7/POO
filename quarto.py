@@ -2,7 +2,7 @@ class Quarto:
     def __init__(self, numero, tipo, disponivel, preço):
         self.numero = numero
         self._tipo = tipo
-        self.__disponivel = True or False
+        self.__disponivel = disponivel
         self.__preço = preço
 
     def verificar_disponibilidade(self):
@@ -15,3 +15,13 @@ class Quarto:
 
     def obter_preco(self):
         self.__preço
+
+    def _calcular_preco(self):
+        preços = {
+            "simples": 90.00,
+            "duplo": 170.00,
+            "luxo":220.00
+        }
+
+    def __alterar_disponibilidade(self, status: bool):
+        self.__disponivel = status
