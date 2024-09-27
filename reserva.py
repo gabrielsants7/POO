@@ -1,4 +1,6 @@
 from datetime import date
+from quarto import Quarto
+
 class Reserva:
     def __init__(self, quarto, quantidade_diarias, check_in, check_out):
         self._quarto = quarto
