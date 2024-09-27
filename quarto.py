@@ -25,3 +25,12 @@ class Quarto:
 
     def __alterar_disponibilidade(self, status: bool):
         self.__disponivel = status
+
+    def reservar(self):
+        if self.verificar_disponibilidade():
+            self.__alterar_disponibilidade(False)
+        else:
+            print(f"O quarto {self.numero} já está reservado.")
+    
+    def liberar(self):
+        self.__alterar_disponibilidade(True)
